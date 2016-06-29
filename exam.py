@@ -19,5 +19,12 @@ def names_second(text):
         name = element[0].strip(',;:!?-\n).(#^ ')
         print(name)
 
+def names_third(text):
+    res = re.findall('([А-Я][а-я]+ [А-Я][а-я]+(,|!|\?|\.|\;|\:|-| |\)\n))', text)
+    for element in res:
+        name = element[0].strip(',;:!?-\n).(#^ ')
+        print(name)
+        
 names_first(basic('text.txt'))
 names_second(basic('text.txt'))
+names_third(basic('text.txt'))

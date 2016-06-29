@@ -31,6 +31,7 @@ def main():
     names_first(basic('text.txt'))
     print ('\nTask 2 \nНайти в статье вообще все имена (инициалы + фамилия, например, В. И. Наливайко; имя + фамилия, например, Винченцо Бренна): \n')
     names_second(basic('text.txt'))
+    print ('\n')
     names_third(basic('text.txt'))
 
 path = r'C:/Users/sony/Desktop'

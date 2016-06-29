@@ -13,4 +13,11 @@ def names_first(text):
         name = element[0].strip(',;:!?-\n).(#^ ')
         print(name)
 
+def names_second(text):
+    res = re.findall('([А-Я]. [А-Я]. [А-Я][а-я]+(,|!|\?|\.|\;|\:|-| |\)\n))', text)
+    for element in res:
+        name = element[0].strip(',;:!?-\n).(#^ ')
+        print(name)
+
 names_first(basic('text.txt'))
+names_second(basic('text.txt'))

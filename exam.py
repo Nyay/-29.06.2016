@@ -1,4 +1,5 @@
 import re
+import os
 
 def basic (filename):
     f = open(filename, 'r', encoding = 'UTF-8') 
@@ -31,6 +32,17 @@ def main():
     print ('\nTask 2 \nНайти в статье вообще все имена (инициалы + фамилия, например, В. И. Наливайко; имя + фамилия, например, Винченцо Бренна): \n')
     names_second(basic('text.txt'))
     names_third(basic('text.txt'))
+
+path = r'C:/Users/sony/Desktop'
+projectname = 'Экзамен Имена'
+folders = \
+[]
+def createFolder(path):
+	if not os.path.exists(path):
+		os.mkdir(fullPath)
+
+fullPath = os.path.join(path,projectname)
+createFolder(fullPath)
 
 if __name__ == '__main__':
     main()

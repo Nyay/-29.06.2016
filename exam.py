@@ -25,12 +25,12 @@ def names_third(text):
         print(name)
         
 def main():
-    filename = input ('Введите название файла с расширением(файл с заготовкой "text.txt"): ')
+    #filename = input ('Введите название файла с расширением(файл с заготовкой "text.txt"): ')
     print ('Task 1 \nНайти и распечатать на экране все упоминания имен вида "инициал + фамилия": \n')
-    names_first(basic(filename))
+    names_first(basic('text.txt'))
     print ('\nTask 2 \nНайти в статье вообще все имена (инициалы + фамилия, например, В. И. Наливайко; имя + фамилия, например, Винченцо Бренна): \n')
-    names_second(basic(filename))
-    names_third(basic(filename))
+    names_second(basic('text.txt'))
+    names_third(basic('text.txt'))
 
 if __name__ == '__main__':
     main()

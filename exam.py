@@ -1,5 +1,4 @@
 import re
-import os
 
 def basic (filename):
     f = open(filename, 'r', encoding = 'UTF-8') 
@@ -25,6 +24,13 @@ def names_third(text):
         name = element[0].strip(',;:!?-\n).(#^ ')
         print(name)
         
-names_first(basic('text.txt'))
-names_second(basic('text.txt'))
-names_third(basic('text.txt'))
+def main():
+    filename = input ('Введите название файла с расширением(файл с заготовкой "text.txt"): ')
+    print ('Task 1 \nНайти и распечатать на экране все упоминания имен вида "инициал + фамилия": \n')
+    names_first(basic(filename))
+    print ('\nTask 2 \nНайти в статье вообще все имена (инициалы + фамилия, например, В. И. Наливайко; имя + фамилия, например, Винченцо Бренна): \n')
+    names_second(basic(filename))
+    names_third(basic(filename))
+
+if __name__ == '__main__':
+    main()
